@@ -1,0 +1,31 @@
+head,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-image: url(back2.png);
+  background-repeat: repeat;
+}
+.center {
+  text-align: center;
+}
+
+.none {
+  display: none;
+}
+
+.result {
+}
+
+.left {
+  text-align: left;
+}
+
+.xxlarge {
+  font-size: xx-large;
+}
+
+.min-width {
+  min-width: 250px;
+}
