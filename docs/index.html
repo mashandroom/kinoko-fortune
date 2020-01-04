@@ -4,9 +4,33 @@
 <head>
     <link rel="stylesheet" type="text/css" href="kinoko.css">
     <script type="text/javascript" src="kinoko.js"></script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '922454284823140',
+                cookie: true,
+                xfbml: true,
+                version: 'v5.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/ja_JP/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </head>
 
 <body>
+    <div class="header">
+        菌駕信念 キノコ占い！<a href="https://mashandroom.org">by マッシュ＆ルーム</a>
+    </div>
     <div class="center" style="width: 100%; height: 100%">
         <audio src="./res/sound/fortune.mp3" id="fortuneBgm"></audio>
         <audio src="./res/sound/pon.mp3" id="ponBgm"></audio>
@@ -15,23 +39,15 @@
     </div>
     <div class="result none center" id="result">
         <img src="" id="resultImage" width="30%">
-        <table class="left xxlarge">
-            <tr>
-                <td>
-                    仕事
-                </td>
-                <td>
-                    叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う叶う
-                </td>
-            <tr>
-                <td class="min-width">
-                    ラッキーキノコ
-                </td>
-                <td>
-                    <img src="" id="luckyKinoko" width="30%">
-                </td>
-            </tr>
-        </table>
+        <div class="xxlarge">
+            ラッキーキノコ<br />
+            <img src="" id="luckyKinoko" width="50%">
+        </div>
+        <a href="" style"display: hidden" id="tweetLink"></a>
+        <input type="button" id="tweetBtn" class="btn-shadow" onclick="tweet()" value="結果をツイート"><br />
+
+        <input type="button" id="shareFBBtn" class="btn-shadow" onclick="shareFB()" value="FBでシェア">
+
     </div>
 </body>
 
