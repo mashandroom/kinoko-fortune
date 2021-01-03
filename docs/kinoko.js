@@ -111,7 +111,7 @@ function showResult() {
 
 function tweet(body) {
     tweetLink = document.getElementById('tweetLink');
-    tweetLink.href = `https://twitter.com/share?text=【キノコ】私の今年のラッキーキノコは、${luckyKinokoList[kinokoId].name}です。美味しく頂きます。&url=https://mashandroom.github.io/kinoko-fortune/&hashtags=菌駕信念,キノコ`;
+    tweetLink.href = `https://twitter.com/share?text=【キノコ】私の今年のラッキーキノコは、${luckyKinokoList[kinokoId].name}です。美味しく頂きます。&url=https://mashandroom.github.io/kinoko-fortune/&hashtags=菌賀信念,キノコ`;
     tweetLink.click();
 }
 

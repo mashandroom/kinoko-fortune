@@ -4,9 +4,9 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
     <meta property="og:url" content="https://mashandroom.github.io/kinoko-fortune/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="菌駕信念。キノコ占い！" />
+    <meta property="og:title" content="菌賀信念。キノコ占い！" />
     <meta property="og:description" content="おみくじをまだ引いていない方、試しにキノコ占いはいかがでしょうか？" />
-    <meta property="og:site_name" content="菌駕信念。キノコ占い！" />
+    <meta property="og:site_name" content="菌賀信念。キノコ占い！" />
     <meta property="og:image" content="https://mashandroom.org/images/sns-ogp.png" />
     <meta property="fb:app_id" content="922454284823140" />
     <meta name="twitter:card" content="Summary Card" />
@@ -38,7 +38,7 @@
 
 <body>
     <div class="header">
-        菌駕信念 キノコ占い！ by <a href="https://mashandroom.org">マッシュ＆ルーム</a>
+        菌賀信念 キノコ占い！ by <a href="https://mashandroom.org">マッシュ＆ルーム</a>
     </div>
     <div class="center" style="width: 100%; height: 100%">
         <audio src="./res/sound/fortune.mp3" id="fortuneBgm"></audio>
@@ -50,13 +50,14 @@
         <img src="" id="resultImage" width="30%">
         <div class="xxlarge">
             ラッキーキノコ<br />
-            <img src="" id="luckyKinoko" width="50%">
+            <img src="" id="luckyKinoko" width="50%"><br/>
+            <a href="https://mashandroom.org/kinoko-fortune/">その心は！</a>
         </div>
-        <a href="" style"display: hidden" id="tweetLink"></a>
-        <input type="button" id="tweetBtn" class="btn-shadow" onclick="tweet()" value="結果をツイート"><br />
-
-        <input type="button" id="shareFBBtn" class="btn-shadow" onclick="shareFB()" value="FBでシェア">
-
+        <div style="margin-top: 30px;">
+            <a href="" style="display: hidden" id="tweetLink" target="_blank"></a>
+            <img src="./res/img/Twitter_Logo_WhiteOnBlue.png" id="tweetBtn" onclick="tweet()" value="結果をツイート">
+            <img src="./res/img/f_logo_RGB-Blue_100.png" id="shareFBBtn" onclick="shareFB()" value="FBでシェア">
+        </div>
     </div>
 </body>
 
